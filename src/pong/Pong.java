@@ -57,12 +57,19 @@ public class Pong implements GLEventListener
     private long  prevTime;     // nano sec
     private float readyTime;
     private float aiTime;
-
+    
+    // to store the current screen resolution
+    private int screenWidth;
+    private int screenHeight;
+    
+    // to store scores of each player
+    private int playerScore;
+    private int computerScore;
+    
+    // declare objects needed in the game
     private Ball ball;
     private Paddle player;
     private Paddle computer;
-    private int playerScore;
-    private int computerScore;
     private Sound sound;
     private TextRenderer textRenderer;
 
@@ -644,7 +651,8 @@ public class Pong implements GLEventListener
     @Override
     public void init(GLAutoDrawable drawable)
     {
-        ((Component)drawable).addKeyListener( new MyKeyListener());
+        ((Component)drawable).addKeyListener( new MyEventListener());
+        ((Component)drawable).addMouseMotionListener(new MyEventListener());
 
         // init OpenGL
         GL2 gl = drawable.getGL().getGL2();
@@ -669,6 +677,10 @@ public class Pong implements GLEventListener
     @Override
     public void reshape(GLAutoDrawable drawable, int x, int y, int w, int h)
     {
+        // to remember the screen width/height when the window is resized
+        screenWidth = w;
+        screenHeight = h;
+        
         GL2 gl = drawable.getGL().getGL2();
 
         gl.glViewport(0, 0, w, h);
@@ -713,8 +725,8 @@ public class Pong implements GLEventListener
     }
     
     //////////////////////////////////Inner Class /////////////////////////////
-    
-    class MyKeyListener implements KeyListener
+    // inner class to implements KeyListener and MouseMotionLister
+    class MyEventListener implements KeyListener, MouseMotionListener
     {
         @Override
         public void keyPressed(KeyEvent e)
@@ -755,11 +767,24 @@ public class Pong implements GLEventListener
                     break;
 
                 case KeyEvent.VK_DOWN:
+                    // stop moving player's paddle up
                     player.setMovingDown(false);
                     break; 
             }
         }
 
+        @Override
+        public void mouseDragged(MouseEvent e)
+        {
+            float y = (float)e.getY() / screenHeight * SCREEN_HEIGHT;
+            player.getPosition().y = SCREEN_HEIGHT - y;
+        }
+        
+        @Override
+        public void mouseMoved(MouseEvent e)
+        {
+        }
+        
         @Override
         public void keyTyped(KeyEvent e)
         {
