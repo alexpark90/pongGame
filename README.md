@@ -17,9 +17,10 @@ The user can use both the keyboard and the mouse to control the paddle.<br />
 JOGL(Java OpenGL) is used to render visualization.<br />
 * OpenGL is an industry standard 2D/3D graphics APIs.<br />
 
-Libraries: jogl-all-natives-windows-amd64.jar, gluegen-rt.jar, and jogl-all.jar 
+Libraries: jogl-all-natives-windows-amd64.jar, gluegen-rt.jar, and jogl-all.jar <br />
 <br />
-Below is gif file of game playing demo. It does not look as much smooth as the actual game is.<br />
+
+Playing file below is gif file. It does not look as much smooth as the actual game is.<br />
 If you download the avi video file, you can see the better quality.<br />
 <a href="https://raw.githubusercontent.com/alexpark90/pongGame/master/pongPlay.avi">Click here to download</a>
 <br />
