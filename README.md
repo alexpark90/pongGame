@@ -19,4 +19,9 @@ JOGL(Java OpenGL) is used to render visualization.
 
 Libraries: jogl-all-natives-windows-amd64.jar, gluegen-rt.jar, and jogl-all.jar 
 
+Below is gif file of game playing demo. It does not look as much smooth as the actual game is.
+If you download the avi video file, you can see the better quality.
+
 ![gif file](https://raw.githubusercontent.com/alexpark90/pongGame/master/pongPlay.gif)
+
+![click here to download video](https://raw.githubusercontent.com/alexpark90/pongGame/master/pongPlay.avi)
