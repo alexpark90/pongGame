@@ -18,3 +18,5 @@ JOGL(Java OpenGL) is used to render visualization.
 * OpenGL is an industry standard 2D/3D graphics APIs.
 
 Libraries: jogl-all-natives-windows-amd64.jar, gluegen-rt.jar, and jogl-all.jar 
+
+![alexpark90.github.io](https://raw.githubusercontent.com/alexpark90/pongGame/master/pongVideo.avi)
