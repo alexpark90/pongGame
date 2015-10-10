@@ -22,6 +22,7 @@ Libraries: jogl-all-natives-windows-amd64.jar, gluegen-rt.jar, and jogl-all.jar
 Below is gif file of game playing demo. It does not look as much smooth as the actual game is.<br />
 If you download the avi video file, you can see the better quality.<br />
 <a href="https://raw.githubusercontent.com/alexpark90/pongGame/master/pongPlay.avi">Click here to download</a>
+<br />
 ![gif file](https://raw.githubusercontent.com/alexpark90/pongGame/master/pongPlay.gif)
 
 
